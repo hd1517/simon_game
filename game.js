@@ -68,6 +68,8 @@ function playsound(name) {
      if (!jQuery.browser.mobile) { // If it's not on mobile, then play sound
        var audio = new Audio("sounds/" + name + ".mp3");
        audio.play();
+     } else {
+       // do nothing;
      }
 }
 
