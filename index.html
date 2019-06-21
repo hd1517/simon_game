@@ -21,7 +21,7 @@
   <script src="https://code.createjs.com/1.0.0/soundjs.min.js"></script>
 </head>
 
-<body onload="loadSound()">
+<body>
 
   <div class="container-fluid containerTop ">
 
@@ -29,11 +29,16 @@
       <h1 id="instructions">Watch!</h1>
       <div class="row">
         <div type="button" id="green" class="myButton green"></div>
+        <audio class="greenAudio" src="sounds/green.mp3"></audio>
         <div type="button" id="red" class="myButton red"></div>
+        <audio class="redAudio" src="sounds/red.mp3"></audio>
       </div>
       <div class="row">
         <div type="button" id="yellow" class="myButton yellow"></div>
+        <audio class="yellowAudio" src="sounds/yellow.mp3"></audio>
         <div type="button" id="blue" class="myButton blue"></div>
+        <audio class="blueAudio" src="sounds/blue.mp3"></audio>
+        <audio class="wrongAudio" src="sounds/wrong.mp3"></audio>
       </div>
       <h2 class="score">Score: 0</h2>
       <h2 class="hiScore"></h2>
