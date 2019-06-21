@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
 <head>
   <meta charset="utf-8">
   <meta name="description" content="The Simon Game">
@@ -29,16 +30,16 @@
       <h1 id="instructions">Watch!</h1>
       <div class="row">
         <div type="button" id="green" class="myButton green"></div>
-        <audio class="greenAudio" src="sounds/green.mp3"></audio>
+        <audio class="greenAudio" src="sounds/green.mp3" preload="auto"></audio>
         <div type="button" id="red" class="myButton red"></div>
-        <audio class="redAudio" src="sounds/red.mp3"></audio>
+        <audio class="redAudio" src="sounds/red.mp3" preload="auto"></audio>
       </div>
       <div class="row">
         <div type="button" id="yellow" class="myButton yellow"></div>
-        <audio class="yellowAudio" src="sounds/yellow.mp3"></audio>
+        <audio class="yellowAudio" src="sounds/yellow.mp3" preload="auto"></audio>
         <div type="button" id="blue" class="myButton blue"></div>
-        <audio class="blueAudio" src="sounds/blue.mp3"></audio>
-        <audio class="wrongAudio" src="sounds/wrong.mp3"></audio>
+        <audio class="blueAudio" src="sounds/blue.mp3" preload="auto"></audio>
+        <audio class="wrongAudio" src="sounds/wrong.mp3" preload="auto"></audio>
       </div>
       <h2 class="score">Score: 0</h2>
       <h2 class="hiScore"></h2>
@@ -52,14 +53,11 @@
       <button type="button" class="startBtn" onclick="startGame()">Game Start</button>
     </div>
 
-
-
-
   </div>
 
-
-
+  <!-- jQuery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <!-- My scripts -->
   <script src="game.js" charset="utf-8"></script>
 </body>
 

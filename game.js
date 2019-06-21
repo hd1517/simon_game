@@ -9,17 +9,10 @@ var score = 0;
 var highscore = 0;
 var wrong = "wrong";
 
-function playsound1(sound) {
+function playSound(sound) {
   var audio = document.querySelector("." + sound + "Audio");
   audio.play();
 }
-
-
-// Function to play audio when button is clicked or played
-// function playsound(name) {
-//   var audio = new Audio("sounds/" + name + ".mp3");
-//   audio.play();
-// }
 
 // Function to start game
 function startGame() {
@@ -38,7 +31,7 @@ function playGamePattern() {
 
 // setInterval to play the gamePattern array items every 1 second
   var player = setInterval(function() {
-    playsound1(gamePattern[colorIndex]); // Play audio
+    playSound(gamePattern[colorIndex]); // Play audio
     $("#" + (gamePattern[colorIndex])).fadeOut(300).fadeIn(300); // Animate button
     colorIndex++; // Increment to move on to the next item in the array
     if (colorIndex >= gamePattern.length) { // When colorIndex is equal to the number of items in gamePattern array
@@ -55,7 +48,7 @@ function nextSequence() {
   var randomChosencolor = buttoncolors[randomNumber]; // From the random number generated, select the coordinating color in the buttoncolors Array
   $("#" + randomChosencolor).fadeOut(300).fadeIn(300); // Select the button with the corresponding color and animate
   gamePattern.push(randomChosencolor); // Push the color into the gamePattern Array
-  playsound1(randomChosencolor); // Play the audio
+  playSound(randomChosencolor); // Play the audio
   userClickedPattern = []; // Clear userClickedPattern
   pos = 0; // Reset pos to 0
 
@@ -84,7 +77,7 @@ function animatePress(currentcolor) {
 $(".myButton").click(function() {
   var userChosencolor = $(this).attr("id"); // Find id
   if (started == true) { // If the gamePattern sequence has been played already
-    playsound1(userChosencolor); // Play audio
+    playSound(userChosencolor); // Play audio
     animatePress(userChosencolor); // Animate button
     userClickedPattern.push(userChosencolor); // Push the chosen color to userClickedPattern array
     checkAnswer(); // Call function to check answer
@@ -107,7 +100,7 @@ function checkAnswer() {
       setTimeout(playGamePattern, 1000); // After 1 second, playGamePattern
     }
   } else { // If player has got the wrong sequence
-    playsound1(wrong); // Play wrong audio
+    playSound(wrong); // Play wrong audio
 
     // Flash game over class
     $("body").addClass("game-over");
