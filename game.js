@@ -8,18 +8,18 @@ var colorIndex = 0;
 var score = 0;
 var highscore = 0;
 var wrong;
-var blueSound = "blue";
-var greenSound = "green";
-var redSound = "red";
-var yellowSound = "yellow";
-var wrongSound = "wrong";
+var blue = "blue";
+var green = "green";
+var red = "red";
+var yellow = "yellow";
+var wrong = "wrong";
 
 function loadSound() {
-  createjs.Sound.registerSound("sounds/blue.mp3", blueSound);
-  createjs.Sound.registerSound("sounds/green.mp3", greenSound);
-  createjs.Sound.registerSound("sounds/red.mp3", redSound);
-  createjs.Sound.registerSound("sounds/yellow.mp3", yellowSound);
-  createjs.Sound.registerSound("sounds/wrong.mp3", wrongSound);
+  createjs.Sound.registerSound("sounds/blue.mp3", blue);
+  createjs.Sound.registerSound("sounds/green.mp3", green);
+  createjs.Sound.registerSound("sounds/red.mp3", red);
+  createjs.Sound.registerSound("sounds/yellow.mp3", yellow);
+  createjs.Sound.registerSound("sounds/wrong.mp3", wrong);
 }
 
 function playSound(target) {
